@@ -1,7 +1,7 @@
-use std::{num::ParseIntError, str::FromStr};
+use std::{str::FromStr, error::Error};
 
 #[aoc_generator(day2)]
-fn gen(input: &str) -> Result<Vec<Command>, ParseIntError> {
+fn gen(input: &str) -> Result<Vec<Command>, Box<dyn Error>> {
     let mut output = Vec::new();
     for line in input.lines() {
         let mut split = line.split(' ');
