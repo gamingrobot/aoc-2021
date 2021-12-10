@@ -51,7 +51,7 @@ pub fn part2(input: &Vec<Vec<u8>>) -> u32 {
         current_bit += 1;
     }
     println!("Oxygen: {:?}", current);
-    let oxygen = convert_bits_to_bytes(&current[0]);// & 0b0000_1111_1111_1111; //set the top 4 bits to 0;
+    let oxygen = convert_bits_to_bytes(&current[0]);
     println!("oxygen: {} {:0>8b}", oxygen, oxygen);
     current = input.clone(); //gross
     current_bit = 0;
@@ -71,7 +71,7 @@ pub fn part2(input: &Vec<Vec<u8>>) -> u32 {
         current_bit += 1;
     }
     println!("Co2: {:?}", current);
-    let co2 = convert_bits_to_bytes(&current[0]);// & 0b0000_1111_1111_1111; //set the top 4 bits to 0;
+    let co2 = convert_bits_to_bytes(&current[0]);
     println!("Co2: {} {:0>8b}", co2, co2);
     oxygen as u32 * co2 as u32
 }
